@@ -10,10 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.17.1",
     "express-hateoas-links": "^1.2.0",
     "merge": "^2.1.1",
-    "mongoose": "^5.12.3",
-    "body-parser": "^1.17.2"
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.3"
   }
 }
