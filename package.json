@@ -2,11 +2,8 @@
   "name": "hateoas-demo",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "15.x"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,7 +11,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-hateoas-links": "^1.2.0",
-    "heroku": "^7.52.0",
     "merge": "^2.1.1",
     "mongoose": "^5.12.3"
   }
