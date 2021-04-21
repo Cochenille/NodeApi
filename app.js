@@ -4,6 +4,8 @@ var app = express();
 var hateoasLinker = require('express-hateoas-links');
 //Permet de récupérer du JSON dans le corps de la requête
 var bodyParser = require('body-parser');
+const PORT = process.env.PORT || 8090
+
 app.use(bodyParser.json());
 
 //importe notre routeur du fichier base.js
@@ -22,6 +24,6 @@ app.all('*', function (req, res) {
 });
 
 // Démarrage du serveur.
-app.listen(8090, function () {
-    console.log('Serveur sur port ' + this.address().port);
+app.listen(PORT, function () {
+    console.log('Serveur sur port ' + PORT);
 });

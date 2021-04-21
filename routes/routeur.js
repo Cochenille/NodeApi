@@ -3,12 +3,13 @@
 var express = require('express');
 var routeur = express.Router();
 var url_base = "http://localhost:8090";
+var connexionString = 'mongodb+srv://test:test@cluster0.e3yt3.mongodb.net/HATOEAS-demo';
 //Importation de modèle Personne
 var PersonneModel = require('../models/personneModel.js').Personne;
 //ORM Mongoose
 var mongoose = require('mongoose');
 // Connexion à MongoDB avec Mongoose
-mongoose.connect('mongodb+srv://test:test@cluster0.e3yt3.mongodb.net/HATOEAS-demo', {
+mongoose.connect(connexionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     poolSize: 10
@@ -36,8 +37,7 @@ routeur.route('/personnes/:personne_id').get(function(req, res){
 
 // Exemple HATOEAS pour une collection
 routeur.get('/personnes', function(req, res){
-
-    PersonneModel.find({},function(err,personnes){
+    console.log('consultation des personnes');
         PersonneModel.find({}, function (err, personnes) {
             
             var resBody = [];
@@ -57,7 +57,6 @@ routeur.get('/personnes', function(req, res){
             if (err) throw err;
             res.json(resBody);
         });
-    }); 
 });
 
 
