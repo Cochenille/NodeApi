@@ -4,7 +4,7 @@ var app = express();
 var hateoasLinker = require('express-hateoas-links');
 //Permet de récupérer du JSON dans le corps de la requête
 var bodyParser = require('body-parser');
-const PORT = process.env.PORT || 8090
+const PORT = process.env.PORT || 8090;
 
 app.use(bodyParser.json());
 
